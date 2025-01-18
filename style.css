@@ -3,6 +3,9 @@ body {
     background-color: #ffffff;
     padding-right: 64px;
     padding-left: 64px;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    gap : 32px;
 }
 
 header {
@@ -10,53 +13,82 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    
+}
+
+main {
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    background-image: url('img/topbillede.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    width: 120%;
+    height: 100vh; /* Adjust height as needed */
+    margin-left : -72px;
+    
+}
+
+main img {
+    display: none; /* Hide the img element */
+}
+
+
+main h1 {
+    margin-left: 64px;
+    color: #ffffff;
+    font-size: 4rem;
+    font-family: 'dm serif display', serif;
+    font-weight: 500;
+    max-width: 50%;
+}
+
+main p {
+    margin-left: 64px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    max-width: 50%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+
 }
 
 .logo {
-    transform: scale(0.8);
+    transform: scale(.8);
 }
 
 .nav-links {
     display: flex;
     justify-content: space-between;
-    max-width: fit-content;
-}
-
-.ul-links {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    list-style-type: none;
+    list-style: none;
     white-space: nowrap;
     gap: 32px;
-
 }
 
-.burger-menu {
+.burger {
     display: none;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
     flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
     justify-content: space-around;
     align-items: center;
-    background: url('burger-menu-svgrepo-com.svg') no-repeat center center;
-    background-size: contain;
 }
 
-.burger-menu-items {
-    display: none;
-    position: absolute; /* or fixed, depending on your design */
-    top: 64px; /* adjust as needed */
-    right: 0;
-    background-color: #fff; /* or your preferred background */
-    /* Add padding, box-shadow, etc. as needed */
-}
-
-/* When the 'active' class is toggled, show the menu items */
-.burger-menu-items.active {
-    display: block;
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 5px;
 }
 
 .book-meeting-btn {
@@ -82,12 +114,35 @@ header {
         padding-right: 32px;
         padding-left: 32px;
     }
-    .nav-links {
-        display: none;
+
+    main h1 {
+        font-size: 3rem;
+        max-width: 100%;
     }
 
-    .burger-menu {
-        display: block;
+    .nav-links {
+        display: none; /* Hide navigation items by default */
+        position: absolute;
+        top: 80px; /* Adjust this if necessary */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the menu when active */
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: flex;
     }
 }
 

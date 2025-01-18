@@ -6,49 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rooster</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img src="img/rooster-logo.png" alt="rooster" class="logo">
-        <nav class="nav-links">
-            <ul class="ul-links">
+        <nav class="navbar">
+            <img src="img/rooster-logo.png" alt="rooster" class="logo">
+            <ul class="nav-links">
                 <li><a>Menupunkt #1</a></li>
                 <li><a>Menupunkt #2</a></li>
                 <li><a>Menupunkt #3</a></li>
                 <li><a>Menupunkt #4</a></li>
                 <li><a>Menupunkt #5</a></li>
             </ul>
-        </nav>
-        <button class="book-meeting-btn">
-            BOOK ET MØDE
-        </button>
-        <div class="burger-menu">
-            <div class="burger-menu-items">
-                <ul>
-                    <li><a href="#">Menupunkt #1</a></li>
-                    <li><a href="#">Menupunkt #2</a></li>
-                    <li><a href="#">Menupunkt #3</a></li>
-                    <li><a href="#">Menupunkt #4</a></li>
-                    <li><a href="#">Menupunkt #5</a></li>
-                </ul>
+
+            <button class="book-meeting-btn">
+                BOOK ET MØDE
+            </button>
+            <div class="burger" id="burger">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
             </div>
-        </div>
-
-
-
+        </nav>
     </header>
+    <main>
+        <img src="img/topbillede.jpg" alt="topbillede" />
+        <h1>Making it right entirely in Copenhagen since 1997</h1>
+        <p>Every product embodies our spirit of family legacy, traditional craftsmanship, and a genuine commitment to sustainability</p>
+    </main>
     <script>
-        // 1. Grab the burger menu and the container that holds the menu items
-        const burgerMenu = document.querySelector('.burger-menu');
-        const burgerMenuItems = document.querySelector('.burger-menu-items');
-      
-        // 2. Add a click event listener on the burger menu
-        burgerMenu.addEventListener('click', () => {
-          // 3. Toggle a CSS class to show/hide the menu items
-          burgerMenuItems.classList.toggle('active');
+        // Toggle the menu visibility on small screens
+        const burger = document.getElementById("burger");
+        const navLinks = document.querySelector(".nav-links");
+
+        burger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            burger.classList.toggle("toggle");
         });
-      </script>
+    </script>
 </body>
 
 </html>
