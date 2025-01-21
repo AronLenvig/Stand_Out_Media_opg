@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rooster</title>
+    <!-- header icon -->
+    <link rel="icon" href="img/rooster-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;700&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
@@ -33,19 +36,89 @@
         </nav>
     </header>
     <main>
-        <h1>Making it right entirely in Copenhagen since 1997</h1>
-        <p>Every product embodies our spirit of family legacy, traditional craftsmanship, and a genuine commitment to sustainability</p>
+        <div class="hero">
+            <h1 class="hero-h1"> Making it right entirely in Copenhagen since 1997</h1>
+            <p class="hero-p">Every product embodies our spirit of family legacy, traditional craftsmanship, and a
+                genuine commitment to sustainability</p>
+            <button class="hero-btn">
+                BOOK ET MØDE
+            </button>
+        </div>
     </main>
-    <script>
-        // Toggle the menu visibility on small screens
-        const burger = document.getElementById("burger");
-        const navLinks = document.querySelector(".nav-links");
+    <section class="idea-section">
+        <div class="idea">
+            <h2 class="idea-h2">Pursuit of excellence</h2>
+            <p class="idea-p">The idea of “form follows function,” a principle associated with the modernist design
+                movement, was the starting place for our Voda collection. Its classic geometry and clean finishes unite
+                into an industrial modern style, crafted for Australian living.
+            </p>
+            <button class="idea-btn">
+                KONTAKT OS
+            </button>
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="section-2-columns">
+            <div class="section-2-column">    
+                <img src="img/splitsektion-1.jpg" alt="splitsektion-1">
+            </div>
+            <div class="section-2-column">
+                <h2 class="section-2-h2">Modern refinement</h2>
+                <p class="section-2-p">Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og gør vores byer og samfund mere bæredygtige.</p>
+                <p class="section-2-p">Transforming Society Together.</p>
+                <button class="section-2-btn">
+                    KONTAKT OS
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="section-3">
+        <div class="section-3-columns">
+            <div class="section-3-column">
+                <div class="image-container">
+                    <img src="img/ydelser.jpg" alt="ydelser">
+                    <h1>Ydelser</h1>
+                </div>
+            </div>
+            <div class="section-3-column">
+                <div class="image-container">
+                    <img src="img/service.jpg" alt="service">
+                    <h1>Service</h1>
+                </div>
+            </div>
+            <div class="section-3-column">
+                <div class="image-container">
+                    <img src="img/kontaktos.jpg" alt="kontaktos">
+                    <h1>Kontakt os</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="section-2-columns">
+            <div class="section-2-column">
+                <h2 class="section-2-h2">Modern refinement</h2>
+                <p class="section-2-p">Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og gør vores byer og samfund mere bæredygtige.</p>
+                <p class="section-2-p">Transforming Society Together.</p>
+                <button class="section-2-btn">
+                    KONTAKT OS
+                </button>
+            </div>
+            <div class="section-2-column">    
+                <img src="img/splitsektion-2.jpg" alt="splitsektion-2" style="margin-right: 128px;">
+            </div>
+        </div>
+    </section>
+        <script>
+            // Toggle the menu visibility on small screens
+            const burger = document.getElementById("burger");
+            const navLinks = document.querySelector(".nav-links");
 
-        burger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-            burger.classList.toggle("toggle");
-        });
-    </script>
+            burger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+                burger.classList.toggle("toggle");
+            });
+        </script>
 </body>
 
 </html>
