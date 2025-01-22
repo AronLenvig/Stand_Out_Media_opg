@@ -1,263 +1,228 @@
-body {
-    display: flex;
-    background-color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    flex-direction: column;
+/* ------------------------------
+   RESET & GLOBAL STYLES
+------------------------------ */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #ffffff;
     display: flex;
-    justify-content: space-between;
-    gap: 32px;
-    align-items: center;
+    flex-direction: column;
+}
+
+/* Container utility for general layout */
+.container {
     width: 100%;
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    /* Adjust side padding as needed */
+}
+
+/* ------------------------------
+     HEADER & NAVBAR
+  ------------------------------ */
+.header {
+    width: 100%;
+    background: #fff;
 }
 
 .navbar {
-    margin-left: 128px;
-    margin-right: 128px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 0;
 }
 
 .logo {
-    transform: scale(.8);
+    height: auto;
+    transform: scale(0.8);
 }
 
+/* Navigation links */
 .nav-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     list-style: none;
-    white-space: nowrap;
-    gap: 64px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Burger menu - hidden by default on large screens */
 .burger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
-    justify-content: space-around;
-    align-items: center;
+    gap: 5px;
 }
 
 .burger-line {
     width: 25px;
     height: 3px;
-    background-color: #000000;
+    background-color: #000;
     border-radius: 5px;
 }
 
-.book-meeting-btn {
-    background-color: #000000;
-    color: #ffffff;
+/* ------------------------------
+     BUTTON STYLES
+  ------------------------------ */
+.btn {
     padding: 1rem 2rem;
     border-radius: 8px;
     font-weight: 600;
     text-transform: uppercase;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.book-meeting-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
     cursor: pointer;
+    white-space: nowrap;
 }
 
-main {
-    display: flex;
-    background-image: url('img/topbillede.jpg'); /* Replace with your image path */
+.btn-dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-light:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* ------------------------------
+     HERO SECTION
+  ------------------------------ */
+.hero {
+    width: 100%;
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 100vh; /* Adjust height as needed */
-}
-
-.hero {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 128px;
+    align-items: center;
 }
 
-.hero-h1 {
-    margin-bottom: 0px;
-    color: #ffffff;
+.hero-content {
+    color: #fff;
+    /* max-width: 50%; */
+}
+
+.hero-content h1 {
     font-size: 4rem;
-    font-family: 'dm serif display', serif;
-    font-weight: 500;
+    font-family: "DM Serif Display", serif;
+    margin-bottom: 1rem;
     max-width: 50%;
 }
 
-.hero-p {
-    color: #ffffff;
+.hero-content p {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
     max-width: 50%;
 }
 
-.hero-btn {
-    box-sizing: border-box;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 200px;
-}
-.hero-btn:hover {
-    background-color: #000000;
-    color: #ffffff;
-    cursor: pointer;
-}
+/* ------------------------------
+     SECTIONS
+  ------------------------------ */
 
 .idea-section {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
     height: 50vh;
+}
+.section {
+    padding: 4rem 0;
+    width: 100%;
+}
+
+.bg-light-brown {
     background-color: #f8dd9f;
+    /* height: 50vh; */
+    align-content: center;
 }
 
-.idea {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Idea / highlight section center text */
+.idea-section .text-center {
+    text-align: center;
     align-items: center;
-}
-
-.idea-h2 {
-    color: #000000;
-    font-size: 3rem;
-    font-weight: 500;
-    font-family: 'dm serif display', serif;
-    margin: 0;
-}
-
-.idea-p {
-    color: #000000;
-    font-size: 1rem;
-    max-width: 50%;
-}
-
-.idea-btn {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.idea-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
-    cursor: pointer;
-}
-
-/* Section 2 */
-
-.section-2 {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100vh;
-    background-color: #ffffff;
-}
-
-.section-2-columns {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 128px;
-    gap: 64px;
-}
-
-.section-2-column {
     width: 50%;
-    display: flex;
-    flex-direction: column;
 }
 
-.section-2-h2 {
-    color: #000000;
+.idea-section h2 {
+    font-family: "DM Serif Display", serif;
     font-size: 3rem;
-    font-weight: 500;
-    font-family: 'dm serif display', serif;
-    margin: 0;
+    margin-bottom: 1rem;
 }
 
-.section-2-p {
-    color: #000000;
-    font-size: 1rem;
+.idea-section p {
+    font-size: 1rem;    
+    margin-bottom: 1rem;
 }
 
-.section-2-column-reverse img {
+/* ------------------------------
+     SPLIT SECTIONS
+  ------------------------------ */
+
+.split-section .split-columns {
     display: flex;
-    flex-direction: column;
-    margin-right: 128px;
-}
-
-.section-2-btn {
-    margin-top: 64px;
-    background-color: #000000;
-    color: #ffffff;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 200px;
-}
-
-.section-2-btn:hover {
-    background-color: #ffffff;
-    color: #000000;
-    cursor: pointer;
-}
-
-
-/* Section 3  */
-
-.section-3 {
-    display: flex;
-    justify-content: center;
+    gap: 2rem;
     align-items: center;
-    height: 100vh;
-    max-height: fit-content;
 }
 
-.section-3-columns {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-
-.section-3-column {
+.split-section .split-col {
     flex: 1;
+}
+
+.split-section .reverse {
+    flex-direction: row-reverse;
+}
+
+/* Heading + paragraph styling */
+.split-section h2 {
+    font-family: "DM Serif Display", serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.split-section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* ------------------------------
+     IMAGE TRIO SECTION
+  ------------------------------ */
+.section-3 .trio-columns {
     display: flex;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.trio-columns {
+    max-width: none;
+}
+
+.section-3 .trio-col {
+    flex: 1;
 }
 
 .image-container {
     position: relative;
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    height: 100%;
 }
 
 .image-container img {
@@ -267,154 +232,178 @@ main {
 }
 
 .image-container h1 {
-    font-family: 'dm serif display', serif;
     position: absolute;
-    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: "DM Serif Display", serif;
     font-size: 3rem;
     text-align: center;
     font-weight: 500;
 }
 
+/* ------------------------------
+     CONTACT / FORM SECTION
+  ------------------------------ */
+.contact-section .contact-columns {
+    display: flex;
+    gap: 2rem;
+}
+
+.contact-section .contact-col {
+    flex: 1;
+}
+
+/* Headings in contact section */
+.contact-col h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.contact-col p {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Form styling */
+.form-style {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
 
-/* Media queries */
+.form-style input,
+.form-style textarea {
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: inherit;
+}
 
+.form-style button {
+    margin-left: auto;
+}
+
+/* ------------------------------
+     FOOTER
+  ------------------------------ */
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 2rem;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.footer-col h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.social-icon img{
+    height: 24px;
+    width: 24px;
+}
+
+/* ------------------------------
+     MEDIA QUERIES
+  ------------------------------ */
+/* Tablet and below */
 @media (max-width: 1200px) {
-
-    .navbar {
-        margin-left: 64px;
-        margin-right: 64px;
+    .hero-content {
+        max-width: 100%;
+        margin: 0 1rem;
     }
 
-    .hero {
-        margin-left: 64px;
-    }
-
-    .hero-h1 {
+    .hero-content h1 {
         font-size: 3rem;
-        max-width: 100%;
     }
 
-    .hero-p {
-        font-size: 1rem;
-        max-width: 100%;
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .burger {
+        display: flex;
+        /* Show burger on mobile */
     }
 
     .nav-links {
-        display: none; /* Hide navigation items by default */
+        display: none;
+        /* Hide menu by default */
         position: absolute;
-        top: 80px; /* Adjust this if necessary */
+        top: 116px;
         left: 0;
-        width: 100%;
-        background-color: #fff;
+        right: 0;
+        flex-direction: column;
+        background: #fff;
         text-align: center;
-        padding: 20px 0;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        gap: 1rem;
+        padding: 1rem 0;
     }
 
     .nav-links.active {
-        display: flex; /* Show the menu when active */
-        flex-direction: column;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .burger {
         display: flex;
+        /* Show on toggle */
     }
 
-    .section-2 {
-        align-items: center;
+    .navbar {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
-    .section-2-columns {
+    .idea-section .text-center {
+        width: 100%;
+    }
+
+       /* Split sections stack vertically */
+       .split-section .split-columns {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 32px; /* Adjust the gap as needed for spacing */
-        margin-left: 0; /* Center the content */
     }
 
-    .section-2-column {
-        width: 100%; /* Full width for each column */
-        text-align: center; /* Center align text for better aesthetics */
+    /* Trio columns stack */
+    .section-3 .trio-columns {
+        flex-direction: column;
     }
 
-    .section-2-column img {
-        width: 80%; /* Make the image responsive */
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 32px;
-
+    /* Contact columns stack */
+    .contact-section .contact-columns {
+        flex-direction: column;
     }
-
-    .section-2-column-reverse img {
-        width: 80%; /* Make the image responsive */
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 32px;
-    }
-
-    .section-2-h2 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
-    }
-
-    .section-2-p {
-        font-size: 1rem; /* Keep text readable */
-        margin-top: 16px; /* Add spacing between elements */
-    }
-
-    .section-2-btn {
-        margin-top: 32px;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto; /* Add spacing between button and text */
-    }
-
-
-
-
 }
 
+/* Mobile and below */
 @media (max-width: 768px) {
-    .navbar {
-        margin-left: 32px;
-        margin-right: 32px;
-    }
 
-    .hero {
-        margin-left: 32px;
-    }
 
-    .hero-h1 {
+ 
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .hero-content h1 {
         font-size: 2rem;
-        max-width: 100%;
-    }
-
-    .hero-p {
-        font-size: 1rem;
-        max-width: 100%;
-    }
-
-    .nav-links {
-        gap: 32px;
-    }
-
-    .burger {
-        display: flex;
     }
 
     .image-container h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
-
-
 }
-
-@media (max-width: 480px) {
-}
-

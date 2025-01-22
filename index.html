@@ -2,32 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rooster</title>
-    <!-- header icon -->
-    <link rel="icon" href="img/rooster-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/rooster-logo.png" type="image/x-icon" />
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <img src="img/rooster-logo.png" alt="rooster" class="logo">
-            <ul class="nav-links">
-                <li><a>Menupunkt #1</a></li>
-                <li><a>Menupunkt #2</a></li>
-                <li><a>Menupunkt #3</a></li>
-                <li><a>Menupunkt #4</a></li>
-                <li><a>Menupunkt #5</a></li>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <nav class="navbar container">
+            <img src="img/rooster-logo.png" alt="rooster" class="logo" />
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Menupunkt #1</a></li>
+                <li><a href="#">Menupunkt #2</a></li>
+                <li><a href="#">Menupunkt #3</a></li>
+                <li><a href="#">Menupunkt #4</a></li>
+                <li><a href="#">Menupunkt #5</a></li>
             </ul>
 
-            <button class="book-meeting-btn">
-                BOOK ET MØDE
-            </button>
+            <!-- Book Meeting Button -->
+            <button class="btn btn-dark">BOOK ET MØDE</button>
+
+            <!-- Mobile Menu Burger -->
             <div class="burger" id="burger">
                 <div class="burger-line"></div>
                 <div class="burger-line"></div>
@@ -35,90 +41,191 @@
             </div>
         </nav>
     </header>
+
+    <!-- Hero Section -->
     <main>
-        <div class="hero">
-            <h1 class="hero-h1"> Making it right entirely in Copenhagen since 1997</h1>
-            <p class="hero-p">Every product embodies our spirit of family legacy, traditional craftsmanship, and a
-                genuine commitment to sustainability</p>
-            <button class="hero-btn">
-                BOOK ET MØDE
-            </button>
-        </div>
+        <section class="hero" style="background-image: url('img/topbillede.jpg');">
+            <div class="container hero-content">
+                <h1>Making it right entirely in Copenhagen since 1997</h1>
+                <p>
+                    Every product embodies our spirit of family legacy,
+                    traditional craftsmanship, and a genuine commitment to sustainability
+                </p>
+                <button class="btn btn-light">BOOK ET MØDE</button>
+            </div>
+        </section>
     </main>
-    <section class="idea-section">
-        <div class="idea">
-            <h2 class="idea-h2">Pursuit of excellence</h2>
-            <p class="idea-p">The idea of “form follows function,” a principle associated with the modernist design
-                movement, was the starting place for our Voda collection. Its classic geometry and clean finishes unite
-                into an industrial modern style, crafted for Australian living.
+
+    <!-- Idea / Highlight Section -->
+    <section class="section bg-light-brown idea-section">
+        <div class="container text-center">
+            <h2>Pursuit of excellence</h2>
+            <p>
+                The idea of “form follows function,” a principle associated with
+                the modernist design movement, was the starting place for our Voda collection.
+                Its classic geometry and clean finishes unite into an industrial modern style,
+                crafted for Australian living.
             </p>
-            <button class="idea-btn">
-                KONTAKT OS
-            </button>
+            <button class="btn btn-dark">KONTAKT OS</button>
         </div>
     </section>
-    <section class="section-2">
-        <div class="section-2-columns">
-            <div class="section-2-column">    
-                <img src="img/splitsektion-1.jpg" alt="splitsektion-1">
+
+    <!-- Split Section (1) -->
+    <section class="section split-section">
+        <div class="container split-columns">
+            <div class="split-col">
+                <img src="img/splitsektion-1.jpg" alt="splitsektion-1" />
             </div>
-            <div class="section-2-column">
-                <h2 class="section-2-h2">Modern refinement</h2>
-                <p class="section-2-p">Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og gør vores byer og samfund mere bæredygtige.</p>
-                <p class="section-2-p">Transforming Society Together.</p>
-                <button class="section-2-btn">
-                    KONTAKT OS
-                </button>
+            <div class="split-col">
+                <h2>Modern refinement</h2>
+                <p>
+                    Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter,
+                    ingeniører og øvrige specialister skaber vi løsninger, der adresserer urbanisering,
+                    griber digitaliseringens muligheder og gør vores byer og samfund mere bæredygtige.
+                </p>
+                <p>Transforming Society Together.</p>
+                <button class="btn btn-dark">KONTAKT OS</button>
             </div>
         </div>
     </section>
-    <section class="section-3">
-        <div class="section-3-columns">
-            <div class="section-3-column">
+
+    <!-- Image Trio Section -->
+    <section class="section section-3">
+        <div class="container trio-columns">
+            <div class="trio-col">
                 <div class="image-container">
-                    <img src="img/ydelser.jpg" alt="ydelser">
+                    <img src="img/ydelser.jpg" alt="ydelser" />
                     <h1>Ydelser</h1>
                 </div>
             </div>
-            <div class="section-3-column">
+            <div class="trio-col">
                 <div class="image-container">
-                    <img src="img/service.jpg" alt="service">
+                    <img src="img/service.jpg" alt="service" />
                     <h1>Service</h1>
                 </div>
             </div>
-            <div class="section-3-column">
+            <div class="trio-col">
                 <div class="image-container">
-                    <img src="img/kontaktos.jpg" alt="kontaktos">
+                    <img src="img/kontaktos.jpg" alt="kontakt os" />
                     <h1>Kontakt os</h1>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section-2">
-        <div class="section-2-columns">
-            <div class="section-2-column">
-                <h2 class="section-2-h2">Modern refinement</h2>
-                <p class="section-2-p">Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og gør vores byer og samfund mere bæredygtige.</p>
-                <p class="section-2-p">Transforming Society Together.</p>
-                <button class="section-2-btn">
-                    KONTAKT OS
-                </button>
+
+    <!-- Split Section (2) -->
+    <section class="section split-section">
+        <div class="container split-columns reverse">
+            <div class="split-col">
+                <img src="img/splitsektion-2.jpg" alt="splitsektion-2" />
             </div>
-            <div class="section-2-column-reverse">    
-                <img src="img/splitsektion-2.jpg" alt="splitsektion-2">
+            <div class="split-col">
+                <h2>Modern refinement</h2>
+                <p>
+                    Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter,
+                    ingeniører og øvrige specialister skaber vi løsninger, der adresserer urbanisering,
+                    griber digitaliseringens muligheder og gør vores byer og samfund mere bæredygtige.
+                </p>
+                <p>Transforming Society Together.</p>
+                <button class="btn btn-dark">KONTAKT OS</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact / Form Section -->
+    <section class="section bg-light-brown contact-section">
+        <div class="container contact-columns">
+            <div class="contact-col">
+                <h1>Get in touch</h1>
+                <h3>We are awwwards and we are here to serve!</h3>
+                <h3>How can we help you?</h3>
+                <p>If you have any questions, please contact us through this form.</p>
+                <p>Please complete the following fields.</p>
+            </div>
+            <div class="contact-col">
+                <form class="form-style">
+                    <input type="text" name="name" placeholder="Dit navn" />
+                    <input type="tel" name="phone" placeholder="telefonnummer" />
+                    <input type="email" name="email" placeholder="Din email" />
+                    <textarea name="message" placeholder="eventuel besked"></textarea>
+                    <button class="btn btn-dark">KONTAKT OS</button>
+                </form>
             </div>
         </div>
     </section>
-        <script>
-            // Toggle the menu visibility on small screens
-            const burger = document.getElementById("burger");
-            const navLinks = document.querySelector(".nav-links");
 
-            burger.addEventListener("click", () => {
-                navLinks.classList.toggle("active");
-                burger.classList.toggle("toggle");
-            });
-        </script>
+    <!-- Footer Section -->
+     <footer>
+        <div class="container footer-columns">
+            <div class="footer-col">
+                <h1>Find os her</h1>
+                <p>Rooster Fried Chicken</p>
+                <p >Firmavej 109</p>
+                <p style="margin-bottom: 16px;">2300 Firmaby</p>
+                <p>Telefon: +45 12 34 56 78</p>
+                <p style="margin-bottom: 16px;">Mail: info@roosterfried.dk</p>
+                <p style="font-weight: bold; margin-bottom: 8px;" >Åbningstider</p>
+                <p>Mandag - fredag: 10:00 - 17:30</p>   
+                <p style="margin-bottom: 16px;">Lørdag: 10:00 - 15:00</p>
+                <div class="social-icons">
+                    <i class="social-icon">
+                        <img src="img/facebook-ikon-hvid.png" alt="facebook" />
+                    </i>
+                    <i class="social-icon">
+                        <img src="img/instagram-ikon-hvid.png" alt="instagram" />
+                    </i>
+                    <i class="social-icon">
+                        <img src="img/linkedin-ikon-hvid.png" alt="linkedin" />
+                    </i>
+                    <i class="social-icon">
+                        <img src="img/pinterest-ikon-hvid.png" alt="pinterest" />
+                    </i>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h1>Information</h1>
+                <p>Om Rooster</p>
+                <p>kataloger & film</p>
+                <p>kunde guide</p>
+                <p>opskrift</p>
+                <p>presse</p>
+                <p>karriere</p>
+                
+            </div>
+            <div class="footer-col" style="gap: 8px;">
+                <h1>About</h1>
+                <p>About Us</p>
+                <p>Careers</p>  
+                <p>Terms of Service</p>
+                <p>Refund Policy</p>
+                <p>Help Center</p>
+            </div>
+            <div class="footer-col">
+                <h1>Shop</h1>
+                <p>Juices</p>
+                <p>Supplements</p>
+                <p>Pantry</p>
+                <p>Locations</p>
+                <p>Order Ahead</p>
+                <p>Term of Service</p>
+                <p>Refund Policy</p>
+            </div>
+        </div>
+     </footer>
+
+
+
+    <!-- JS for Burger Menu -->
+    <script>
+        const burger = document.getElementById("burger");
+        const navLinks = document.getElementById("nav-links");
+
+        burger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            burger.classList.toggle("toggle");
+        });
+    </script>
 </body>
 
 </html>
